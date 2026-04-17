@@ -1,0 +1,2 @@
+# Ignore transient verification state
+.agent-state/
