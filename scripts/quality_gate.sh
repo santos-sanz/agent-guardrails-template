@@ -12,12 +12,12 @@ BLUE='\033[0;34m'
 RESET='\033[0m'
 
 fail() {
-  printf "${RED}QUALITY GATE: FAIL${RESET}\n" >&2
+  printf '%b\n' "${RED}QUALITY GATE: FAIL${RESET}" >&2
   exit 1
 }
 
 pass() {
-  printf "${GREEN}QUALITY GATE: PASS${RESET}\n"
+  printf '%b\n' "${GREEN}QUALITY GATE: PASS${RESET}"
 }
 
 run_step() {
@@ -47,7 +47,7 @@ run_step "shell syntax check" bash -n "$ROOT_DIR/scripts/quality_gate.sh"
 if command -v shellcheck >/dev/null 2>&1; then
   run_step "shellcheck" shellcheck "$ROOT_DIR/scripts/run_required_checks.sh" "$ROOT_DIR/scripts/quality_gate.sh"
 else
-  printf "${YELLOW}shellcheck not installed; skipping${RESET}\n"
+  printf '%b\n' "${YELLOW}shellcheck not installed; skipping${RESET}"
 fi
 
 pass
