@@ -17,16 +17,13 @@ This template was extended from [neovasili/2026-copilot-dev-day](https://github.
 
 ## Sources and inspiration
 
-This template is based on [neovasili/2026-copilot-dev-day](https://github.com/neovasili/2026-copilot-dev-day) and extends it with guardrail patterns from these articles:
+This template is based on [neovasili/2026-copilot-dev-day](https://github.com/neovasili/2026-copilot-dev-day) and extends it with guardrail patterns from the articles that directly informed the implementation:
 
 - [TeamDay.ai: Complete Guide to Agentic Coding 2026](https://www.teamday.ai/blog/complete-guide-agentic-coding-2026) — sandboxing, approval gates, and test-driven validation for agents
 - [Marmelab: Agent Experience](https://marmelab.com/blog/2026/01/21/agent-experience.html) — postprocess hooks, diff inspection, and guardrails for agent outputs
-- [CodeScene: Agentic AI Coding Best Practice Patterns for Speed with Quality](https://codescene.com/blog/agentic-ai-coding-best-practice-patterns-for-speed-with-quality) — coverage thresholds as behavior guardrails
 - [Propel: Agentic Engineering Code Review Guardrails](https://www.propelcode.ai/blog/agentic-engineering-code-review-guardrails) — risk tiers, policy checks, and review escalation
 - [Andrii Furmanets: AI Agents in 2026](https://andriifurmanets.com/blogs/ai-agents-2026-practical-architecture-tools-memory-evals-guardrails) — capability gating, stateful architecture, tracing, and security boundaries
 - [Allerin: Agentic AI Systems: Guardrails, Evals, and Human-in-the-Loop](https://www.allerin.com/resources/agentic-ai-guardrails-evals-hitl) — minimal eval suites and runtime guardrails
-- [Towards Data Science: Agentic AI 102](https://towardsdatascience.com/agentic-ai-102-guardrails-and-agent-evaluation/) — guardrails, task completion, and agent evaluation patterns
-- [arXiv: Agentic AI Security: Threats, Defenses, Evaluation, and Open Problems](https://arxiv.org/html/2510.23883v2) — threat taxonomy and defensive framing for agent security
 
 ## Core idea
 
