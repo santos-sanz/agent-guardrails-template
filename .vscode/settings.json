@@ -1,0 +1,6 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "./scripts/run_required_checks.sh": true,
+    "make quality": true
+  }
+}
