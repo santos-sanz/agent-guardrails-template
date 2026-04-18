@@ -11,6 +11,7 @@ Keep the agent contract stable while swapping the stack-specific verification in
 3. Edit only `scripts/quality_gate.sh` to call the real checks for your stack
 4. Keep `make quality` pointing at `./scripts/run_required_checks.sh`
 5. Mirror the same command in CI
+6. If you need deeper guardrails, add `docs/risk-tiers.md`, `docs/agent-architecture.md`, `scripts/run_evals.sh`, and `scripts/agent_postprocess.sh` rather than inventing one-off ad hoc checks
 
 ## Example stack mappings
 
@@ -47,3 +48,14 @@ go test ./...
 
 Do not expose five different "official" commands to the agent.
 Expose one command and let that command orchestrate the rest.
+
+## Portable guardrail layers
+
+If your downstream repo needs more than formatting, linting, and tests, add the layers in this order:
+
+1. document the contract in `AGENTS.md`
+2. keep the public verification entrypoint stable
+3. classify change risk with `docs/risk-tiers.md`
+4. add `scripts/run_evals.sh` for accuracy and safety suites
+5. add `scripts/agent_postprocess.sh` for risky diffs and high-blast-radius changes
+6. mirror the same checks in CI

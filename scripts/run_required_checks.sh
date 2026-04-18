@@ -10,6 +10,6 @@ printf "[agent-checks] starting required checks\n"
 
 "$ROOT_DIR/scripts/quality_gate.sh"
 
-date --iso-8601=seconds > "$MARKER_FILE"
+date -u +"%Y-%m-%dT%H:%M:%SZ" > "$MARKER_FILE"
 printf "[agent-checks] marker written to %s\n" "$MARKER_FILE"
 printf "[agent-checks] PASS\n"
